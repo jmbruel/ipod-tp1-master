@@ -160,7 +160,7 @@ fix 1.1: Initial Adventure Game
 
 === Improvements
 
-We want to force any designer of a new `Character` to systematically decide the weapon behavior at the instanciation time.
+We want to force any designer of a new `Character` to systematically decide the weapon behavior at the instantiation time.
 
 . Propose a solution to this problem.
 +
@@ -174,7 +174,7 @@ TIP: it is perfectly authorized to create a constructor for an abstract class...
 fix 1.2.2: Initial Adventure Game
 ....
 +
-. Test to add a new `Character` concrete class who does not aply with this new regulation and see that it does not compile.
+. Test to add a new `Character` concrete class who does not apply with this new regulation and see that it does not compile.
 +
 .pass:[<i class="fa fa-github"></i>] commit/push
 [source,shell]
