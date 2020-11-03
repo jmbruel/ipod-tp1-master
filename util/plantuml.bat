@@ -5,7 +5,7 @@ set DOCLETPATH=E:\IUT-S3\CPOA\TP1\SuperCanardBof
 echo "Creating %UML%..."
 rem javadoc -private -quiet -J-DdestinationFile=%UML% -J-DcreatePackages=false -J-DshowPublicMethods=true -J-DshowPublicConstructors=false -J-DshowPublicFields=true -doclet de.mallox.doclet.PlantUMLDoclet -docletpath %DOCLETPATH%\plantUmlDoclet.jar src\canard\*.java
 
-javadoc -J-DdestinationFile=%UML% -J-DcreatePackages=false -J-DshowPublicMethods=true -J-DshowPublicConstructors=false -J-DshowPublicFields=true -doclet de.mallox.doclet.PlantUMLDoclet -docletpath plantUmlDoclet.jar src\appli\*.java src\armes\*.java src\armes\impl\*.java
+javadoc -J-DdestinationFile=%UML% -J-DcreatePackages=false -J-DshowPublicMethods=true -J-DshowPublicConstructors=false -J-DshowPublicFields=true -doclet de.mallox.doclet.PlantUMLDoclet -docletpath plantUmlDoclet.jar src\appli\*.java src\weapons\*.java src\weapons\impl\*.java
 echo "Done."
 
 set TYPE='png'

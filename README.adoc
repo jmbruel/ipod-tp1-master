@@ -120,7 +120,7 @@ endif::[]
 
 === Basics
 
-. Using _Strategy_, and using the package organization provided at <<setArme,the end of this doc>>,, 
+. Using _Strategy_, and using the package organization provided at <<setWeapon,the end of this doc>>,, 
 write the classes and behaviors of the adventure game of TD1 (section 1.7.2):
 +
 .Minimal adventure game
@@ -136,17 +136,17 @@ As this is your own code, please write your Classes in English:
 |===============================================
 | FR 					|  US     			| RU
 | Character    		|  Character   		| ??
-| Reine     			|  Queen   			| ??
-| Roi     				|  King 			| ??
+| Queen     			|  Queen   			| ??
+| King     				|  King 			| ??
 | Troll    				|  Troll   			| ??
 | Chevalier    			|  Knight   		| ??
-| ComportementArme    	|  BehaviorWeapon   | ??
-| ComportementPoignard	|  BehaviorKnife   	| ??
-| ComportementArc    	|  BehaviorBow   	| ??
-| ComportementEpee    	|  BehaviorSword   	| ??
-| combattre()    		|  fight()   		| ??
-| setArme()    			|  setWeapon()		| ??
-| utiliserArme()    	|  useWeapon()		| ??
+| BehaviorWeapon    	|  BehaviorWeapon   | ??
+| BehaviorPoignard	|  BehaviorKnife   	| ??
+| BehaviorBow    	|  BehaviorBow   	| ??
+| BehaviorSword    	|  BehaviorSword   	| ??
+| fight()    		|  fight()   		| ??
+| setWeapon()    			|  setWeapon()		| ??
+| useWeapon()    	|  useWeapon()		| ??
 |===============================================
 
 =====
@@ -194,7 +194,7 @@ and you can then select his/her weapon.
 .pass:[<i class="fa fa-github"></i>] commit/push
 [source,shell]
 ....
-fix 1.3 Dynamic Behavior
+fix 1.3: Dynamic Behavior
 ....
 
 === _Reverse engineering_ of the code
@@ -224,7 +224,7 @@ javadoc -J-DdestinationFile=%UML% -J-DcreatePackages=false
 -J-DshowPublicMethods=true -J-DshowPublicConstructors=false
 -J-DshowPublicFields=true -doclet de.mallox.doclet.PlantUMLDoclet
 -docletpath plantUmlDoclet.jar src/appli/*.java
-src/comportements/arme/*.java src/comportements/arme/impl/*.java
+src/behaviors/weapon/*.java src/behaviors/weapon/impl/*.java
 src/Characters/*.java
 echo "Done."
 
@@ -258,7 +258,7 @@ fix 1.4: Final TP1 commit
 
 :numbered!:
 [appendix]
-[[setArme]]
+[[setWeapon]]
 
 == Example of a package organization (taken from `SuperCanard`):
 
@@ -271,15 +271,15 @@ fix 1.4: Final TP1 commit
         │   ├── Leurre.java
         │   ├── Main.java
         │   └── Mandarin.java
-        └── comportements
+        └── behaviors
             ├── cancaner
-            │   ├── ComportementCancan.java
+            │   ├── BehaviorCancan.java
             │   └── impl
             │       ├── CanardMuet.java
             │       ├── Cancan.java
             │       └── Coincoin.java
             └── voler
-                ├── ComportementVol.java
+                ├── BehaviorVol.java
                 └── impl
                     ├── NePasVoler.java
                     └── VolerAvecDesAiles.java

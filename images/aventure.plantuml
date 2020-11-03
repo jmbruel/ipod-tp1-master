@@ -10,40 +10,40 @@ hide empty members
 hide empty methods
 
 
-abstract class Personnage {
-combattre() {this.arme.utiliserArme();}
-setArme(ComportementArme a) {this.arme = a;}
+abstract class MyCharacter {
+fight() {this.weapon.useWeapon();}
+setWeapon(BehaviorWeapon a) {this.weapon = a;}
 }
-class Reine {
-combattre() {...}
+class Queen {
+fight() {...}
 }
-class Roi {
-combattre() {...}
+class King {
+fight() {...}
 }
-class ComportementPoignard {
+class BehaviorPoignard {
 }
-class ComportementArc {
+class BehaviorBow {
 }
-class ComportementEpee {
+class BehaviorSword {
 }
-interface ComportementArme{
-{abstract} utiliserArme()
+interface BehaviorWeapon{
+{abstract} useWeapon()
 }
 class Troll {
-combattre() {...}
+fight() {...}
 }
 class Chevalier {
-combattre() {...}
+fight() {...}
 }
-Personnage <|-- Roi
-Personnage <|-- Reine
-Personnage <|-- Chevalier
-Personnage <|-- Troll
-Personnage o--> "1" ComportementArme
+MyCharacter <|-- King
+MyCharacter <|-- Queen
+MyCharacter <|-- Chevalier
+MyCharacter <|-- Troll
+MyCharacter o--> "1" BehaviorWeapon
 
-ComportementArme <|.. ComportementEpee
-ComportementArme <|.. ComportementPoignard
-ComportementArme <|.. ComportementArc
+BehaviorWeapon <|.. BehaviorSword
+BehaviorWeapon <|.. BehaviorPoignard
+BehaviorWeapon <|.. BehaviorBow
 
 
 @enduml
