@@ -47,16 +47,16 @@ This is a template for the students' assignments.
 //------------------------------------ 
 == Assignment info
 
-{lastName}:: DOE
+{lastName}:: BRUEL
 
 {firstName}:: Jean-Michel
 
 Group #::
 
 [%interactive]
-- [ ] {Enseignants}
+- [x] {Enseignants}
 - [ ] 1
-- [x] 2
+- [ ] 2
 - [ ] 3
 - [ ] 4
 - [ ] Innopolis
