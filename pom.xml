@@ -135,7 +135,32 @@
                 </execution>-->
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.bazaarvoice.maven.plugins</groupId>
+                <artifactId>process-exec-maven-plugin</artifactId>
+                <version>0.4</version>
+                <executions>
+                    <!--Start process-->
+                    <execution>
+                        <id>start-ruby-mock</id>
+                        <phase>generate-test-sources</phase>
+                        <goals><goal>start</goal></goals>
+                        <configuration>
+                            <workingDir>../tests</workingDir>
+                            <arguments>
+                                <argument>ruby</argument>
+                                <argument>testfix0.rb</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <!--Stop Process-->
+                    <execution>
+                        <id>stop-ruby-mock</id>
+                        <phase>post-integration-test</phase>
+                        <goals><goal>stop-all</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>        
         </plugins>
    </build>
-
 </project>
