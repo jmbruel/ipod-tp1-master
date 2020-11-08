@@ -92,7 +92,8 @@ git config --global -l
 * [ ] Modify the README file to add your last name, first name and group number. 
 * [ ] Commit and push using the following message:
 
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 0 Initial task done
@@ -124,7 +125,7 @@ endif::[]
 write the classes and behaviors of the adventure game of TD1 (section 1.7.2):
 +
 .Minimal adventure game
-image::aventure.png[link="images/aventure.png"]
+image::aventure.svg[link="images/aventure.svg"]
 
 
 [INFO]
@@ -135,23 +136,24 @@ As this is your own code, please write your Classes in English:
 [options="header,footer"]
 |===============================================
 | FR 					|  US     			| RU
-| Character    		|  Character   		| ??
-| Queen     			|  Queen   			| ??
-| King     				|  King 			| ??
-| Troll    				|  Troll   			| ??
-| Chevalier    			|  Knight   		| ??
-| BehaviorWeapon    	|  BehaviorWeapon   | ??
-| BehaviorPoignard	|  BehaviorKnife   	| ??
-| BehaviorBow    	|  BehaviorBow   	| ??
-| BehaviorSword    	|  BehaviorSword   	| ??
-| fight()    		|  fight()   		| ??
-| setWeapon()    			|  setWeapon()		| ??
-| useWeapon()    	|  useWeapon()		| ??
+| Personnage    		|  Character   		| Персонаж
+| Reine     			|  Queen   			| Королева
+| Roi     				|  King 			| Король
+| Troll    				|  Troll   			| Тролль
+| Chevalier    			|  Knight   		| Рыцарь
+| ComportementArme    	|  BehaviorWeapon   | ВладениеОружием
+| ComportementPoignard	|  BehaviorKnife   	| ВладениеНожом
+| ComportementArc    	|  BehaviorBow   	| ВладениеЛуком
+| ComportementEpee    	|  BehaviorSword   	| ВладениеМечом
+| tirer()    		    |  fight()   		| сражаться()
+| setArme()    			|  setWeapon()		| установитьОружие()
+| utiliserArme()    	|  useWeapon()		| использоватьОружие()
 |===============================================
 
 =====
 
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.1: Initial Adventure Game
@@ -168,7 +170,8 @@ TIP: it is perfectly authorized to create a constructor for an abstract class...
 +
 . Try this solution by modifying your application
 +
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.2.2: Initial Adventure Game
@@ -176,7 +179,8 @@ fix 1.2.2: Initial Adventure Game
 +
 . Test to add a new `Character` concrete class who does not apply with this new regulation and see that it does not compile.
 +
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.2.3: Initial Adventure Game
@@ -191,7 +195,8 @@ Let's experiment how it is possible now to change at runtime.
 and you can then select his/her weapon.
 . Check that, when you change the weapon, the associated behavior change too.
 
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.3: Dynamic Behavior
@@ -246,7 +251,8 @@ menu:Window[Show View > Other... > PlantUML > PlantUML Source].
 * [ ] Place the resulting plantUML version of your diagram in a `doc` folder at the root of your repo, with the exact name: `TP1.plantuml`
 * [ ] When everything is OK, push your code:
 +
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.4: Final TP1 commit
@@ -255,6 +261,19 @@ fix 1.4: Final TP1 commit
 * [ ] Check your autograding on your repo
 ====
 
+[TIP]
+====
+The autograding will use the `tests/checkModel.rb` ruby file. 
+For example, when applied to the following model:
+
+.`TP1.plantuml` graphical version (source: tests/[TP1.plantuml])
+image::TP1.svg[]
+
+the test (the one dedicated to `SuperCanard`, in `tests/checkSuperCanardModel.rb`) will provide the following result:
+
+.Check result for `TP1.plantuml`
+image::TP1-check.png[]
+====
 
 :numbered!:
 [appendix]
@@ -291,7 +310,8 @@ fix 1.4: Final TP1 commit
 . Test the limits of your implementation (for example what happens if someone does `new Knight(null,null)` ?).
 . Propose some tests in the same way `testfix1.1` was testing the commits in `TD1`.
 
-.pass:[<i class="fa fa-github"></i>] commit/push
+ifndef::backend-pdf[.pass:[<i class="fa fa-github"></i>] commit/push]
+ifdef::backend-pdf[.icon:github[] commit/push]
 [source,shell]
 ....
 fix 1.5: Give me a bonus I did: [please explain]

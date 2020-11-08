@@ -63,7 +63,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.blagnac.cpoa.td1.SuperCanard</mainClass>
+                            <mainClass>AdventureGame</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
