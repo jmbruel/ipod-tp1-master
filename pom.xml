@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>TP1</groupId>
-    <artifactId>TP1</artifactId>
+    <groupId>td2</groupId>
+    <artifactId>td2</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -63,40 +63,9 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>AdventureGame</mainClass>
+                            <mainClass>org.blagnac.cpoa.SuperCanard</mainClass>
                         </manifest>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <doclet>de.mallox.doclet.PlantUMLDoclet</doclet>
-                    <docletPath>plantUMLDoclet.jar</docletPath>
-                    <docletArtifact>
-                        <groupId>de.mallox.doclet</groupId>
-                        <artifactId>PlantUMLDoclet</artifactId>
-                    </docletArtifact>
-                    <additionalOptions>
-                        <additionalOption>-views</additionalOption>
-                    </additionalOptions>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.1</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <excludes>
-                    <exclude>META-INF/**</exclude>
-                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
@@ -115,11 +84,12 @@
                     <workingDirectory>tests</workingDirectory>
                     <arguments>
                         <argument>testfix0.rb</argument>
+                        <argument>../README.adoc</argument>
                     </arguments>
                     </configuration>
                 </execution>
-                <!--<execution>
-                    <id>fix#1.4</id>
+                <execution>
+                    <id>fix1.3</id>
                     <phase>install</phase>
                     <goals>
                     <goal>exec</goal>
@@ -129,38 +99,11 @@
                     <workingDirectory>tests</workingDirectory>
                     <arguments>
                         <argument>checkModel.rb</argument>
-                        <argument>../doc/TP1.plantuml</argument>
                     </arguments>
                     </configuration>
-                </execution>-->
+                </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.bazaarvoice.maven.plugins</groupId>
-                <artifactId>process-exec-maven-plugin</artifactId>
-                <version>0.4</version>
-                <executions>
-                    <!--Start process-->
-                    <execution>
-                        <id>start-ruby-mock</id>
-                        <phase>generate-test-sources</phase>
-                        <goals><goal>start</goal></goals>
-                        <configuration>
-                            <workingDir>../tests</workingDir>
-                            <arguments>
-                                <argument>ruby</argument>
-                                <argument>testfix0.rb</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    <!--Stop Process-->
-                    <execution>
-                        <id>stop-ruby-mock</id>
-                        <phase>post-integration-test</phase>
-                        <goals><goal>stop-all</goal></goals>
-                    </execution>
-                </executions>
-            </plugin>        
         </plugins>
-   </build>
+    </build>
 </project>
