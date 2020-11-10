@@ -44,7 +44,7 @@ class TestGeneratedModel < MiniTest::Unit::TestCase
   end
 
   def test_class_Character_has_BehaviorWeapon
-    assert_contains(/Character\s+[o|"<>"|-]-+> "[\d|.]" BehaviorWeapon/, File.readlines(MODEL_NAME).join)
+    assert_contains(/Character\s+[o|"<>"]-+> "[\d|.]" BehaviorWeapon/, File.readlines(MODEL_NAME).join)
   end
 
   def test_BehaviorWeapon_is_an_Interface
